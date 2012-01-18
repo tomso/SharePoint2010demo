@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationDeployment", "ApplicationDeployment\ApplicationDeployment.csproj", "{EE4B63C0-53D1-4E6F-B478-54FEB7755EC2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationConfiguration", "ApplicationConfiguration", "{44251259-D93A-42D1-8EF4-6DA915BBE48E}"
+	ProjectSection(SolutionItems) = preProject
+		Application.config = Application.config
+		EDB.SP.snk = EDB.SP.snk
+		FxCop.targets = FxCop.targets
+		FxCopConsoleOutput.xsl = FxCopConsoleOutput.xsl
+		Settings.FxCop = Settings.FxCop
+		Settings.ShareCop = Settings.ShareCop
+		Settings.StyleCop = Settings.StyleCop
+		SharePointConfiguration.xml = SharePointConfiguration.xml
+		SharePointTargets.targets = SharePointTargets.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solutions", "Solutions", "{F62FD9EA-2DF1-4646-B3CF-CCA43EBE567C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Components", "Components\Components.csproj", "{C82667B9-B332-41F0-ABEF-83E55FDED3B6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE4B63C0-53D1-4E6F-B478-54FEB7755EC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE4B63C0-53D1-4E6F-B478-54FEB7755EC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE4B63C0-53D1-4E6F-B478-54FEB7755EC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE4B63C0-53D1-4E6F-B478-54FEB7755EC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C82667B9-B332-41F0-ABEF-83E55FDED3B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C82667B9-B332-41F0-ABEF-83E55FDED3B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C82667B9-B332-41F0-ABEF-83E55FDED3B6}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{C82667B9-B332-41F0-ABEF-83E55FDED3B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C82667B9-B332-41F0-ABEF-83E55FDED3B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C82667B9-B332-41F0-ABEF-83E55FDED3B6}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C82667B9-B332-41F0-ABEF-83E55FDED3B6} = {F62FD9EA-2DF1-4646-B3CF-CCA43EBE567C}
+	EndGlobalSection
+EndGlobal

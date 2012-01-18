@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"  ?>
+<Settings>
+	<DisabledRuleGroups>
+		<!--<RuleGroup Name="LocalizationRules" />-->
+	</DisabledRuleGroups>
+	<DisabledRules>
+		<Rule CheckId="SC1234" />
+	</DisabledRules>
+	<Profiles>
+		<Profile Name="AllRules">
+			<EnabledRuleGroups>
+				<RuleGroup Name="License" />
+				<RuleGroup Name="Localization" />
+				<RuleGroup Name="Schema" />
+				<RuleGroup Name="Deployment" />
+				<RuleGroup Name="Customization" />
+				<RuleGroup Name="Security" />
+				<RuleGroup Name="Check" />
+				<RuleGroup Name="Convention" />
+				<RuleGroup Name="Metric" />
+			</EnabledRuleGroups>
+		</Profile>
+		<Profile Name="SharePoint2010Enterprise" NotifyAs="Error">
+			<EnabledRuleGroups>
+				<RuleGroup Name="License" />
+				<RuleGroup Name="Localization" NotifyAs="Warning" />
+				<RuleGroup Name="Schema" />
+				<RuleGroup Name="Deployment" />
+				<RuleGroup Name="Customization" />
+				<RuleGroup Name="Security" />
+				<RuleGroup Name="Check" />
+				<RuleGroup Name="Convention" />
+				<RuleGroup Name="Metric" />
+			</EnabledRuleGroups>
+			<DisabledRules>
+				<Rule CheckId="SC1234" />
+			</DisabledRules>
+		</Profile>
+		<Profile Name="SharePoint2010Standard" NotifyAs="Error">
+			<EnabledRuleGroups>
+				<RuleGroup Name="LocalizationRules" />
+				<RuleGroup Name="SecurityRules" />
+			</EnabledRuleGroups>
+			<DisabledRules>
+				<Rule CheckId="SC1004" />
+			</DisabledRules>
+		</Profile>
+		<Profile Name="SharePoint2010Foundation">
+			<EnabledRuleGroups>
+				<RuleGroup Name="LocalizationRules" />
+				<RuleGroup Name="SecurityRules" />
+				<RuleGroup Name="SchemaRules" />
+			</EnabledRuleGroups>
+		</Profile>
+
+		<Profile Name="MOSS2007Enterprise" NotifyAs="Error">
+			<EnabledRuleGroups>
+				<RuleGroup Name="LocalizationRules" />
+				<RuleGroup Name="SecurityRules" />
+				<RuleGroup Name="MOSS2007Rules" NotifyAs="Warning" />
+			</EnabledRuleGroups>
+			<DisabledRules>
+				<Rule CheckId="SC1004" />
+			</DisabledRules>
+		</Profile>
+		<Profile Name="MOSS2007Standard" NotifyAs="Error">
+			<EnabledRuleGroups>
+				<RuleGroup Name="LocalizationRules" />
+				<RuleGroup Name="SecurityRules" />
+				<RuleGroup Name="MOSS2007Rules" NotifyAs="Warning" />
+			</EnabledRuleGroups>
+			<DisabledRules>
+				<Rule CheckId="SC1004" />
+			</DisabledRules>
+		</Profile>
+		<Profile Name="WSS3">
+			<EnabledRuleGroups>
+				<RuleGroup Name="LocalizationRules" />
+				<RuleGroup Name="SecurityRules" />
+				<RuleGroup Name="SchemaRules" />
+			</EnabledRuleGroups>
+		</Profile>
+		<Profile Name="CustomizationPolicyGold" Description="Checks for compatibility with MS Gold customization policy">
+			<EnabledRuleGroups>
+				<RuleGroup Name="LocalizationRules" />
+				<RuleGroup Name="SecurityRules" />
+				<RuleGroup Name="SchemaRules" />
+				<RuleGroup Name="CustomizationPolicyGoldRules" />
+			</EnabledRuleGroups>
+			<EnabledRules>
+				<Rule CheckId="SC1234" NotifyAs="Error" />
+			</EnabledRules>
+		</Profile>
+		<Profile Name="CustomizationPolicySilver" Description="Checks for compatibility with MS Silver customization policy">
+			<EnabledRuleGroups>
+				<RuleGroup Name="LocalizationRules" />
+				<RuleGroup Name="SecurityRules" />
+				<RuleGroup Name="SchemaRules" />
+				<RuleGroup Name="CustomizationPolicySilverRules" />
+			</EnabledRuleGroups>
+		</Profile>
+	</Profiles>
+</Settings>

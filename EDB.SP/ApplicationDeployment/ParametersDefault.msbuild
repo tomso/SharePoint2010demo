@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <!-- EDIT THIS FILE: This file contains default parameters for the deployment process -->
+  <!-- Deploymentscript SPSF Version 3.1 -->
+
+  <!-- Use the following property group to define application specific parameters-->
+  <PropertyGroup>
+    <ApplicationName>EDB.SP</ApplicationName>
+    <ApplicationTitle>EDB.SP</ApplicationTitle>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <MOSSRequired>false</MOSSRequired>
+    <MinimalSharePointVersion>14.0.0.0</MinimalSharePointVersion>
+  </PropertyGroup>
+
+  <!-- Options for solution deployment -->
+  <PropertyGroup>
+    <!-- Set ForceSolutionDeployment to true to have parameter -force in deploysolution -->
+    <ForceSolutionDeployment>true</ForceSolutionDeployment>
+    <!-- Set DeployToAllContentUrls to true to deploy all wsp solutions to all content web applications -->
+    <DeployToAllContentUrls>true</DeployToAllContentUrls>
+    <!-- Sleep timer after deployment, important in large farms -->
+    <DeploymentSleep>1000</DeploymentSleep>
+    <!-- Set DisplayWizards to true if wizards should be displayed for config values if parameters are missing -->
+    <DisplayWizards>false</DisplayWizards>
+    <RestartSPTimer>false</RestartSPTimer>
+    <RestartSPAdmin>false</RestartSPAdmin>
+    <RestartSPUserCodeHost>false</RestartSPUserCodeHost>
+    <RestartIIS>true</RestartIIS>
+  </PropertyGroup>
+  
+  <!-- Environment specific settings -->
+  <ItemGroup Condition="">
+    <!-- Optional: Specify here web applications for solution deployment, separated with ';', e.g. http://WEBAPP:80;http://WEBAPP:81 -->
+    <DeployToWebApplications Include=" " />
+    <!-- Optional: Specify here site collection for deployment of sandboxed solutions, e.g. http://site1;http://site2 -->
+    <DeploySandboxedSolutionsToSites Include=" " />
+    <!-- Optional: Specify wsp solutions which need to be installed in the farm ';', e.g. solutionname1.wsp;solutionname2.wsp -->
+    <PreRequisiteSolutions Include=" " />
+  </ItemGroup>
+  
+  <!-- Add environment specific parameters, e.g. for server with name 'WIN-DJ61EO9287S', use parameters in deployment with $(SampleProperty) -->
+  <PropertyGroup Condition="'$(Computername)' == 'WIN-DJ61EO9287S'">
+    <SampleProperty>SampleValue</SampleProperty>
+    <SiteUrl>http://sp</SiteUrl>
+  </PropertyGroup>
+  <ItemGroup Condition="'$(Computername)' == 'WIN-DJ61EO9287S'">
+    <DeploySandboxedSolutionsToSites Include="http://sp" />
+  </ItemGroup>
+  
+</Project>
